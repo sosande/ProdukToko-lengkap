@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="14.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tugas.produk.controller.ProdukController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label styleClass="judul" text="Daftar Produk Toko" />
+
+      <!-- ===== FORM TAMBAH PRODUK ===== -->
+      <GridPane hgap="10.0" vgap="10.0" styleClass="form-pane">
+         <columnConstraints>
+            <ColumnConstraints minWidth="90.0" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         </columnConstraints>
+         <children>
+            <Label text="Kode Produk" GridPane.rowIndex="0" />
+            <TextField fx:id="txtKode" promptText="mis. P001" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Nama Produk" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNama" promptText="Nama produk" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Kategori" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbKategori" maxWidth="Infinity" promptText="Pilih kategori" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Harga" GridPane.rowIndex="3" />
+            <TextField fx:id="txtHarga" promptText="Harga (angka)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btnTambah" onAction="#onTambah" styleClass="tombol-utama" text="Tambah Produk" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+
+      <Label fx:id="lblPesan" />
+
+      <!-- ===== PENCARIAN ===== -->
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <TextField fx:id="txtCari" promptText="Cari nama produk..." HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnCari" onAction="#onCari" text="Cari" />
+            <Button fx:id="btnReset" onAction="#onReset" text="Reset" />
+         </children>
+      </HBox>
+
+      <!-- ===== TABEL ===== -->
+      <TableView fx:id="tblProduk" prefHeight="260.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="colKode" prefWidth="100.0" text="Kode" />
+            <TableColumn fx:id="colNama" prefWidth="260.0" text="Nama" />
+            <TableColumn fx:id="colKategori" prefWidth="130.0" text="Kategori" />
+            <TableColumn fx:id="colHarga" prefWidth="130.0" text="Harga" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+
+      <Button fx:id="btnDetail" onAction="#onLihatDetail" text="Lihat Detail" />
+   </children>
+</VBox>

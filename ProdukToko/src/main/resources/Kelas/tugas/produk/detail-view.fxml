@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="14.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tugas.produk.controller.DetailController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label styleClass="judul" text="Detail Produk" />
+      <GridPane hgap="10.0" vgap="10.0" styleClass="form-pane">
+         <columnConstraints>
+            <ColumnConstraints minWidth="90.0" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         </columnConstraints>
+         <children>
+            <Label text="Kode Produk" GridPane.rowIndex="0" />
+            <Label fx:id="lblKode" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Nama Produk" GridPane.rowIndex="1" />
+            <Label fx:id="lblNama" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Kategori" GridPane.rowIndex="2" />
+            <Label fx:id="lblKategori" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Harga" GridPane.rowIndex="3" />
+            <Label fx:id="lblHarga" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnTutup" onAction="#onTutup" styleClass="tombol-utama" text="Tutup" />
+   </children>
+</VBox>

@@ -1,0 +1,50 @@
+/* Style aplikasi Produk Toko */
+
+.root-pane {
+    -fx-background-color: #f5f6fa;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.judul {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2f3640;
+}
+
+.form-pane {
+    -fx-background-color: white;
+    -fx-padding: 14;
+    -fx-background-radius: 8;
+}
+
+.tombol-utama {
+    -fx-background-color: #273c75;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.tombol-utama:hover {
+    -fx-background-color: #192a56;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.text-field:focused,
+.combo-box:focused {
+    -fx-border-color: #273c75;
+    -fx-border-radius: 3;
+}
+
+.table-view {
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #dcdde1;
+}
+
+.pesan-error  { -fx-text-fill: #c23616; -fx-font-weight: bold; }
+.pesan-sukses { -fx-text-fill: #44bd32; -fx-font-weight: bold; }
